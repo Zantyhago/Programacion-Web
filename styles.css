@@ -13,7 +13,6 @@ color:rgb(27, 78, 3);
 text-align: center;
 font-style:inherit;
 border: 3px solid greenyellow;
-grid
 }
 
 body{
@@ -21,4 +20,5 @@ background-color: rgba(42, 183, 226, 0.76);
 background-image: url('jonny.png');
 background-repeat: no-repeat;
 background-position: center;
+background-attachment: local;
 }
