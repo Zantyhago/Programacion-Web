@@ -4,16 +4,19 @@ h1{
 }
 
 nav{
-    top: 0%;
-    background-color: black;
-    background-image: url('verdugo.gif');
-    background-size:  100px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #09ae92;
+    background-image: url('verdugo 2.0.gif');
+    background-size:  155px;
     background-repeat: no-repeat;
     background-position: right;
     font-size: large;
     font-style: italic;
     color: white;
-
+    z-index: 1000;
+    position: fixed;
 }
 
 li{
@@ -27,20 +30,25 @@ header{
 
 nav ul{
     list-style: none;
-    position: flex;
-
+    position: flex;  
 }
+
+section{
+    scroll-margin-top: 160px;
+}
+
 .inicio_div{
-    color:rgb(27, 78, 3);
+    color: #068904;
     text-align: center;
     font-style:inherit;
     font-size: larger;
     border: 10px solid greenyellow;
-    background-color:  rgba(172, 255, 47, 0.644);
+    background-color: #9bf929a1;
 }
 
 body{
-    background-color: rgba(42, 183, 226, 0.76);
+    margin-top: 140px;
+    background-color: #2ba8ddc8;
     background-image: url('jonny.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -48,20 +56,48 @@ body{
 }
 
 .aboutme_div{
+    margin-top: 20px;
     color: rgb(7, 7, 6);
     text-align: left;
     font-size: large;
     font-style: italic;
-    background-color: rgba(255, 255, 255, 0.653);
-    border: 5px solid rgb(47, 255, 85);
+    background-color: #ffffffc2;
+    border: 5px solid #04ff00;
     border-style: dotted;
 }
 
 .proyectos_div{
-    background-color: rgba(255, 255, 255, 0.653);
-    border: 5px solid rgb(47, 255, 85);
-    border-style: dashed;
+    margin-top: 20px;
+    background-color: #ffffffc2;
+    border: 5px solid #04ff00;
+    border-style: dotted;
     text-align: right;
     font-style: oblique;
+}
 
+.contacto_div{
+    margin-top: 20px;
+    background-color: #ffffffc2;
+    border: 5px solid #04ff00;
+    border-style: dotted;
+    text-align: left;
+    font-style: oblique;
+}
+
+.referencias_div{
+    margin-top: 20px;
+    background-color: #ffffffc2;
+    border: 5px solid #04ff00;
+    border-style: dotted;
+    text-align: right;
+    font-style: oblique;
+}
+
+aside{
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer{
+    text-align: center;
 }
