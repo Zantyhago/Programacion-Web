@@ -3,9 +3,18 @@ h1{
     text-align: center;
 }
 
-div{
-    padding: 30px;
-    border-radius: 20px;
+h2{
+    text-decoration: underline;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 0;
+    margin: 45px;
+    font-size: 30px;
 }
 
 nav{
@@ -17,13 +26,69 @@ nav{
     background-size:  155px;
     background-repeat: no-repeat;
     background-position: right;
-    font-size: large;
     font-style: italic;
     color: white;
     z-index: 1000;
     position: fixed;
-    /*display: grid;
-    grid-template-columns: 33% 33% 33%;*/
+}
+
+.inicio_div{
+    color: #068904;
+    text-align: center;
+    font-style:inherit;
+    font-size: larger;
+    border: 10px solid greenyellow;
+    background-color: #9bf929a1;
+    border-radius: 20px;
+}
+
+#sobre-mi, #proyectos, #contacto, #referencias{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    background-color: #ffffffc2;
+    border: 5px solid #04ff00;
+    border-style: dotted;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: large;
+}
+
+.aboutme_div{
+    color: rgb(7, 7, 6);
+    text-align: left;
+    font-style: italic;
+    background-image: url('espejo.png');
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: right 70%;
+}
+
+.proyectos_div{
+    text-align: right;
+    font-style: oblique;
+    background-image: url('logo-piton.png');
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: left 30%;
+}
+
+.contacto_div{
+    text-align: left;
+    font-style: oblique;
+    background-image: url('carta.png');
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: right 40%;
+}
+
+.referencias_div{
+    text-align: right;
+    font-style: oblique;
+    background-image: url('referencia.png');
+    background-repeat: no-repeat;
+    background-size: 100px;
+    background-position: left 80%;
 }
 
 li{
@@ -35,70 +100,22 @@ header{
     text-align: center;
 }
 
-nav ul{
-    list-style: none;
-    position: flex;  
+.fotuki{
+    border-radius: 5px;
+    box-shadow: 0px 6px 10px black;
 }
 
 section{
-    scroll-margin-top: 160px;
-}
-
-
-.inicio_div{
-    color: #068904;
-    text-align: center;
-    font-style:inherit;
-    font-size: larger;
-    border: 10px solid greenyellow;
-    background-color: #9bf929a1;
+    scroll-margin-top: 150px;
 }
 
 body{
-    margin-top: 120px;
+    margin-top: 140px;
     background-color: #2ba8ddc8;
     background-image: url('jonny.png');
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: local;
-}
-
-.aboutme_div{
-    margin-top: 20px;
-    color: rgb(7, 7, 6);
-    text-align: left;
-    font-size: large;
-    font-style: italic;
-    background-color: #ffffffc2;
-    border: 5px solid #04ff00;
-    border-style: dotted;
-}
-
-.proyectos_div{
-    margin-top: 20px;
-    background-color: #ffffffc2;
-    border: 5px solid #04ff00;
-    border-style: dotted;
-    text-align: right;
-    font-style: oblique;
-}
-
-.contacto_div{
-    margin-top: 20px;
-    background-color: #ffffffc2;
-    border: 5px solid #04ff00;
-    border-style: dotted;
-    text-align: left;
-    font-style: oblique;
-}
-
-.referencias_div{
-    margin-top: 20px;
-    background-color: #ffffffc2;
-    border: 5px solid #04ff00;
-    border-style: dotted;
-    text-align: right;
-    font-style: oblique;
 }
 
 aside{
@@ -108,4 +125,9 @@ aside{
 
 footer{
     text-align: center;
+}
+
+#back-to-top-btn{
+    color: red;
+    width: 50px;
 }
