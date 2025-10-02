@@ -11,7 +11,6 @@
   <header>
     <nav>
       <ul>
-        <!--<li><a href = "#inicio">Inicio</a></li>-->
         <li><a href = "#sobre-mi">Sobre mí</a></li>
         <li><a href = "#proyectos">Proyectos</a></li>
         <li><a href = "#contacto">Contacto</a></li>
@@ -54,9 +53,9 @@
       <h2>Contacto</h2>
       <form>
         <label for = "nombre">Nombre</label>
-        <input id = "nombre" type = "text"><br><br>
+        <input id = "nombre" type = "text" placeholder = "Ej.: Santiago Sanchez"><br><br>
         <label for = "email">Email</label>
-        <input id = "email" type = "email"><br><br>
+        <input id = "email" type = "email" placeholder = "ejemplo@example.com"><br><br>
         <label for = "mensaje">Mensaje</label>
         <textarea id = "mensaje"></textarea><br><br>
         <button onclick = "listo(
@@ -82,14 +81,15 @@
     </aside>
   </main>
 
-  <script src = "scripts.js"></script>
   <button id = "back-to-top-btn" title = "Volver arriba">↑</button>
 
   <footer>
     <p>© 2025 Zantyhago</p>
+    <script src = "scripts.js"></script>
     <audio controls>
       <source src = "safe theme.mp3" type = "audio/mpeg">
     </audio>
   </footer>
+  
 </body>
 </html>

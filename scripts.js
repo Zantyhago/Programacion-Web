@@ -29,3 +29,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 });
+
+const footer = document.querySelector("footer");
+const fecha = new Date();
+const pF = document.createElement("p");
+pF.textContent = "Fecha actual: " + fecha.toLocaleDateString("es-ES");
+footer.appendChild(pF);

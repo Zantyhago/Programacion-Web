@@ -130,4 +130,12 @@ footer{
 #back-to-top-btn{
     color: red;
     width: 50px;
+    position: fixed;
+    cursor: pointer;
+    bottom: 30px;
+    right: 30px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 840px;
 }
