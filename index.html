@@ -7,9 +7,9 @@
   <link rel = "stylesheet" href = "styles.css ">
 </head>
 
-<body>
+<body title = "Portfolio - Santiago S.">
   <header>
-    <nav>
+    <nav title = "Barra de navegación">
       <ul>
         <li><a href = "#sobre-mi">Sobre mí</a></li>
         <li><a href = "#proyectos">Proyectos</a></li>
@@ -20,24 +20,24 @@
   </header>
 
   <main>
-    <div class = "inicio_div">
+    <div class = "inicio_div" title = "Inicio">
     <section id = "inicio">
       <h1>Santiago David Sanchez Godoy</h1>
       <p>Estudiante de la Licenciatura en Ciencias de la Computación en la Facultad de Ciencias Exactas, Físicas y Naturales.</p>
     </section>
     </div>
 
-    <div class = "aboutme_div">
+    <div class = "aboutme_div" title = "Acerca de mi">
     <section id = "sobre-mi">
       <h2>Sobre mí</h2>
       <p>Actualmente tengo 24 años.</p>
       <p>Estoy cursando la materia Programación Web, en la cual vemos frontend.</p>
       <p>Me gusta la programación en general y las matemáticas en parte también jijo.</p>
-      <img src = "yo.jpg" alt = "Foto personal" style = "width: 200px;" class = "fotuki"><br>
+      <img src = "img/yo.jpg" alt = "Foto personal" class = "fotuki" title = "yo owo"><br>
     </section>
     </div>
 
-    <div class = "proyectos_div">
+    <div class = "proyectos_div" title = "Algunos proy. propios">
     <section id = "proyectos">
       <h2>Proyectos</h2>
       <article>
@@ -48,27 +48,42 @@
     </section>
     </div>
 
-    <div class = "contacto_div">
+    <div class = "contacto_div" title = "Para contacto">
     <section id = "contacto">
       <h2>Contacto</h2>
+      <h3 id = "contact_h3">Mensaje directo:</h3>
       <form>
-        <label for = "nombre">Nombre</label>
-        <input id = "nombre" type = "text" placeholder = "Ej.: Santiago Sanchez"><br><br>
-        <label for = "email">Email</label>
-        <input id = "email" type = "email" placeholder = "ejemplo@example.com"><br><br>
-        <label for = "mensaje">Mensaje</label>
-        <textarea id = "mensaje"></textarea><br><br>
-        <button onclick = "listo(
+        <table border = "0">
+          <tr>
+            <td><label for = "nombre">Nombre</label></td>
+            <td><input id = "nombre" type = "text" placeholder = "Ej.: Santiago Sanchez"></td>
+          </tr>
+          <tr>
+            <td><label for = "email">Email</label></td>
+            <td><input id = "email" type = "email" placeholder = "ejemplo@example.com"></td>
+          </tr>
+          <tr>
+            <td><label for = "mensaje">Mensaje</label></td>
+            <td><textarea id = "mensaje" placeholder = "hola cara de bola"></textarea></td>
+          </tr>
+          <tr>
+            <td rowspan = "2"><button onclick = "listo(
           document.getElementById('nombre').value,
           document.getElementById('email').value,
-          document.getElementById('mensaje').value)">Enviar</button><br><br>
-        <h3>Redes sociales:</h3>
-        <a href = "https://www.instagram.com/zantyhagowo/" target = "_blank">Instagram</a>
+          document.getElementById('mensaje').value)" style = "cursor: pointer;">Enviar</button></td>
+          </tr>
+        </table>
       </form>
+      <h3 id = "contact_h3_red">Redes sociales:</h3>
+        <ul id = "contact_list">
+          <li><a href = "https://www.instagram.com/zantyhagowo/" target = "_blank">Instagram</a></li><br>
+          <li><a href = "https://wa.me/542645433217" target = "_blank">Enviar wasac</a></li><br>
+          <li><a href = "mailto:santiagodavidsanchezgodoy@gmail.com">Enviar correo</a></li>
+        </ul>
     </section>
     </div>
 
-    <div class = "referencias_div">
+    <div class = "referencias_div" title = "Algunas referencias">
     <section id = "referencias">
       <h2>Referencias</h2>
       <blockquote>“Lic. Jorge y Lic. Belén Calivar (mentores).”</blockquote>
@@ -81,15 +96,17 @@
     </aside>
   </main>
 
-  <button id = "back-to-top-btn" title = "Volver arriba">↑</button>
-
   <footer>
-    <p>© 2025 Zantyhago</p>
+    <p>© 2025 Zantyhago. Todos los derechos reservados. 😏🍔</p>
     <script src = "scripts.js"></script>
     <audio controls>
-      <source src = "safe theme.mp3" type = "audio/mpeg">
+      <source src = "img/safe theme.mp3" type = "audio/mpeg">
     </audio>
   </footer>
-  
+
+  <button id = "subir-btn" title = "Volver arriba"></button>
+  <button id = "claro-btn" onclick = "CambioTema('#2ba8ddc8', 'img/jonny.png', '#ffffffc2', 'black')" title = "Tema claro"></button>
+  <button id = "oscuro-btn" onclick = "CambioTema('#2e2e2e', 'img/jonathan.png', '#aeaeaec2', 'white')" title = "Tema oscuro"></button>
+
 </body>
 </html>

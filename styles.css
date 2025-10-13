@@ -7,6 +7,21 @@ h2{
     text-decoration: underline;
 }
 
+nav{
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #09ae92;
+    background-image: url('img/verdugo 2.0.gif');
+    background-size: 155px;
+    background-repeat: no-repeat;
+    background-position: right;
+    font-style: italic;
+    color: white;
+    z-index: 1000;
+    position: fixed;
+}
+
 nav ul{
     list-style: none;
     display: flex;
@@ -15,21 +30,6 @@ nav ul{
     padding: 0;
     margin: 45px;
     font-size: 30px;
-}
-
-nav{
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #09ae92;
-    background-image: url('verdugo 2.0.gif');
-    background-size:  155px;
-    background-repeat: no-repeat;
-    background-position: right;
-    font-style: italic;
-    color: white;
-    z-index: 1000;
-    position: fixed;
 }
 
 .inicio_div{
@@ -58,7 +58,7 @@ nav{
     color: rgb(7, 7, 6);
     text-align: left;
     font-style: italic;
-    background-image: url('espejo.png');
+    background-image: url('img/espejo.png');
     background-size: 100px;
     background-repeat: no-repeat;
     background-position: right 70%;
@@ -67,7 +67,7 @@ nav{
 .proyectos_div{
     text-align: right;
     font-style: oblique;
-    background-image: url('logo-piton.png');
+    background-image: url('img/logo-piton.png');
     background-size: 100px;
     background-repeat: no-repeat;
     background-position: left 30%;
@@ -76,16 +76,41 @@ nav{
 .contacto_div{
     text-align: left;
     font-style: oblique;
-    background-image: url('carta.png');
+    background-image: url('img/carta.png');
     background-size: 100px;
     background-repeat: no-repeat;
     background-position: right 40%;
 }
 
+#contact_h3{
+    margin-bottom: 0px;
+}
+
+#contact_h3_red{
+    margin-bottom: 20px;
+}
+
+table{
+    margin-top: 0px;
+    border-spacing: 20px;
+    border-collapse: separate;
+}
+
+th, td{
+    text-align: center;
+    vertical-align: middle;
+}
+
+#contact_list{
+    list-style-image: url('img/trollface.png');
+    padding: 0px 30px;
+    margin-top: 0px;
+}
+
 .referencias_div{
     text-align: right;
     font-style: oblique;
-    background-image: url('referencia.png');
+    background-image: url('img/referencia.png');
     background-repeat: no-repeat;
     background-size: 100px;
     background-position: left 80%;
@@ -103,6 +128,7 @@ header{
 .fotuki{
     border-radius: 5px;
     box-shadow: 0px 6px 10px black;
+    width: 200px;
 }
 
 section{
@@ -112,7 +138,7 @@ section{
 body{
     margin-top: 140px;
     background-color: #2ba8ddc8;
-    background-image: url('jonny.png');
+    background-image: url('img/jonny.png');
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: local;
@@ -125,17 +151,39 @@ aside{
 
 footer{
     text-align: center;
+    color: black;
 }
 
-#back-to-top-btn{
-    color: red;
-    width: 50px;
+#claro-btn, #oscuro-btn, #subir-btn{
+    bottom: 30px;
+    width: 55px;
+    height: 55px;
     position: fixed;
     cursor: pointer;
-    bottom: 30px;
-    right: 30px;
+    background-size: 55px 55px;
+    background-repeat: no-repeat;
+    border-radius: 10px;
     border: none;
     padding: 10px 20px;
-    border-radius: 10px;
-    box-shadow: 840px;
+    box-shadow: 0px 6px 10px black;
+}
+
+#subir-btn{
+    display: none;
+    right: 30px;
+    background-image: url('img/mano.png');
+}
+
+#subir-btn.show{
+    display: block;
+}
+
+#claro-btn{
+    left: 30px;
+    background-image: url('img/sol.jpg');
+}
+
+#oscuro-btn{
+    left: 110px;
+    background-image: url('img/luna.jpg');
 }
