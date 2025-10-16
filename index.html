@@ -5,29 +5,30 @@
   <meta name = "viewport" content = "width=device-width, initial-scale=1"> <!-- Responsive -->
   <title>Portfolio - Santiago S.</title>
   <link rel = "stylesheet" href = "styles.css ">
+  <script src = "scripts.js"></script>
 </head>
 
-<body title = "Portfolio - Santiago S.">
+<body title = "Portfolio - Santiago S." class = "oscuroso">
   <header>
     <nav title = "Barra de navegación">
       <ul>
-        <li><a href = "#sobre-mi">Sobre mí</a></li>
-        <li><a href = "#proyectos">Proyectos</a></li>
-        <li><a href = "#contacto">Contacto</a></li>
-        <li><a href = "#referencias">Referencias</a></li>
+        <li><a href = "#sobre-mi" title="Ir a la sección">Sobre mí</a></li>
+        <li><a href = "#proyectos" title="Ir a la sección">Proyectos</a></li>
+        <li><a href = "#contacto" title="Ir a la sección">Contacto</a></li>
+        <li><a href = "#referencias" title="Ir a la sección">Referencias</a></li>
       </ul>
     </nav> 
   </header>
 
   <main>
-    <div class = "inicio_div" title = "Inicio">
+    <div class = "inicio_div oscuroso" title = "Inicio">
     <section id = "inicio">
       <h1>Santiago David Sanchez Godoy</h1>
-      <p>Estudiante de la Licenciatura en Ciencias de la Computación en la Facultad de Ciencias Exactas, Físicas y Naturales.</p>
+      <p id = "oscuroso">Estudiante de la Licenciatura en Ciencias de la Computación en la Facultad de Ciencias Exactas, Físicas y Naturales.</p>
     </section>
     </div>
 
-    <div class = "aboutme_div" title = "Acerca de mi">
+    <div class = "aboutme_div oscuroso" title = "Acerca de mi">
     <section id = "sobre-mi">
       <h2>Sobre mí</h2>
       <p>Actualmente tengo 24 años.</p>
@@ -37,18 +38,37 @@
     </section>
     </div>
 
-    <div class = "proyectos_div" title = "Algunos proy. propios">
+    <div class = "proyectos_div oscuroso"title = "Algunos proy. propios">
     <section id = "proyectos">
       <h2>Proyectos</h2>
-      <article>
-        <h3>Sobre la carrera:</h3>
-        <p>Todos (o casi) los ejercicios de las materias de programación que he cursado:</p>
-        <a href = "https://github.com/Zantyhago?tab=repositories" target = "_blank">Mi GitHub</a>
-      </article>
+      <h3>Nuevo Horizonte
+        <br><button id = "desplegar-btn" title = "Expandir area del proy.">Mostrar</button>
+        <article>
+          <p>Página creada para la empresa Nuevo Horizonte.<br>En la cual se registran los horarios de entrada/salida de los empleados.<br>Todo en una base de datos.</p>
+          <img src = "img/nh.jpg" alt = "Interfaz" class = "mustras"><br><br>
+          <a href = "https://github.com/Zantyhago/POO2025/tree/main/Unidad%205/Nuevo%20Horizonte" target = "_blank" title = "GitHub">Ver código fuente</a>
+        </article>
+      </h3>
+      <h3>Tabla de Posiciones
+        <br><button id = "desplegar-btn" title = "Expandir area del proy.">Mostrar</button>
+        <article>
+          <p>Tabla creada para la Liguilla de Rawson.<br>Se solicitó poder guardar y modificar los puntajes de cada equipo.</p>
+          <img src = "img/tabla.jpg" alt = "Tabla de posiciones" class = "mustras" title = "Tabla de Pocisiones"><br><br>
+          <a href = "https://github.com/Zantyhago/POO2025/tree/main/Unidad%202/PO%201/Recuperatorio/Tema%202" target="_blank" title = "GitHub">Ver código fuente</a>
+        </article>
+      </h3>
+      <h3>Py-Simon game
+        <br><button id = "desplegar-btn" title = "Expandir area del proy.">Mostrar</button>
+        <article>
+          <p>Juego del Simón Dice hecho en python con la librería TKinter.<br>Las partidas se guardan en un JSON.</p>
+          <img src = "img/puntaje.jpg" alt = "Py-Game" class = "mustras"  title = "Interfaz del juego"><br><br>
+          <a href="https://github.com/Zantyhago/POO24/tree/main/Unidad%204" target = "_blank" title = "GitHub">Ver código fuente</a>
+        </article>
+      </h3>
     </section>
     </div>
 
-    <div class = "contacto_div" title = "Para contacto">
+    <div class = "contacto_div oscuroso" title = "Para contacto">
     <section id = "contacto">
       <h2>Contacto</h2>
       <h3 id = "contact_h3">Mensaje directo:</h3>
@@ -70,7 +90,7 @@
             <td rowspan = "2"><button onclick = "listo(
           document.getElementById('nombre').value,
           document.getElementById('email').value,
-          document.getElementById('mensaje').value)" style = "cursor: pointer;">Enviar</button></td>
+          document.getElementById('mensaje').value)">Enviar</button></td>
           </tr>
         </table>
       </form>
@@ -83,30 +103,25 @@
     </section>
     </div>
 
-    <div class = "referencias_div" title = "Algunas referencias">
+    <div class = "referencias_div oscuroso" title = "Algunas referencias">
     <section id = "referencias">
       <h2>Referencias</h2>
       <blockquote>“Lic. Jorge y Lic. Belén Calivar (mentores).”</blockquote>
     </section>
     </div>
 
-    <aside>
+    <aside class = "oscuroso">
       <h2>Información extra</h2>
       <p>Me saqué 7 en poo y 9 en procedural :3</p>
     </aside>
   </main>
 
-  <footer>
+  <footer class = "oscuroso">
     <p>© 2025 Zantyhago. Todos los derechos reservados. 😏🍔</p>
-    <script src = "scripts.js"></script>
-    <audio controls>
-      <source src = "img/safe theme.mp3" type = "audio/mpeg">
-    </audio>
   </footer>
 
   <button id = "subir-btn" title = "Volver arriba"></button>
-  <button id = "claro-btn" onclick = "CambioTema('#2ba8ddc8', 'img/jonny.png', '#ffffffc2', 'black')" title = "Tema claro"></button>
-  <button id = "oscuro-btn" onclick = "CambioTema('#2e2e2e', 'img/jonathan.png', '#aeaeaec2', 'white')" title = "Tema oscuro"></button>
-
+  <button id = "tema-btn" title = "Alternar tema" class = "botonsito"></button>
+  
 </body>
 </html>

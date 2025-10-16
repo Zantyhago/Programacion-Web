@@ -13,32 +13,51 @@ function listo(nombre, email, mensaje){
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    let backToTopBtn = document.getElementById("subir-btn");
+    let VolverBtn = document.getElementById("subir-btn");
     window.addEventListener("scroll", () => {
         if (window.scrollY > 100) {
-            backToTopBtn.classList.add("show");
+            VolverBtn.classList.add("show");
         } else {
-            backToTopBtn.classList.remove("show");
+            VolverBtn.classList.remove("show");
         }
     });
-    backToTopBtn.addEventListener("click", () => {
+    VolverBtn.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
+    document.querySelectorAll("#desplegar-btn").forEach((boton) => {
+    boton.addEventListener("click", () => {
+        const descr = boton.nextElementSibling;
+        descr.classList.toggle("show");
+        if(descr.classList.contains("show")){
+            boton.textContent = "Ocultar";
+        }else{
+            boton.textContent = "Mostrar";}
+        });
+    });
+
+    let TemaBtn = document.getElementById("tema-btn");
+    TemaBtn.addEventListener("click", () => {
+        document.querySelectorAll(".oscuroso").forEach(elemento => {
+            elemento.classList.toggle("oscuro");
+               if(elemento.classList.contains("oscuro")){
+                TemaBtn.style.backgroundImage = "url('img/sol.jpg')";
+               }else{
+                TemaBtn.style.backgroundImage = "url('img/luna.jpg')";
+               }
+        });
+    });
+ 
 });
 
-const footer = document.querySelector("footer");
-const fecha = new Date();
-const pF = document.createElement("p");
-pF.textContent = "Fecha actual: " + fecha.toLocaleDateString("es-ES");
-footer.appendChild(pF);
+    const footer = document.querySelector("footer");
+    const fecha = new Date();
+    const pF = document.createElement("p");
+    pF.textContent = "Fecha actual: " + fecha.toLocaleDateString("es-ES");
+    footer.appendChild(pF);
 
-function CambioTema(background, bg_url, bg_divs, fcolor){
-    document.body.style.backgroundColor = background;
-    document.body.style.backgroundImage = `url(${bg_url})`;
-    document.getElementById('sobre-mi').style.backgroundColor = bg_divs;
-    document.getElementById('proyectos').style.backgroundColor = bg_divs;
-    document.getElementById('contacto').style.backgroundColor = bg_divs;
-    document.getElementById('referencias').style.backgroundColor = bg_divs;
-    document.querySelector('aside').style.color = fcolor;
-    document.querySelector('footer').style.color = fcolor;
-}
+
+
+    ///document.getElementById('descr').style.color = fcolor;
+    ///document.querySelector('aside').style.color = fcolor;
+    ///document.querySelector('footer').style.color = fcolor;

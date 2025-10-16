@@ -7,6 +7,16 @@ h2{
     text-decoration: underline;
 }
 
+p{
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    color: rgb(230, 64, 64);
+    text-align: center;
+}
+
 nav{
     top: 0;
     left: 0;
@@ -16,7 +26,7 @@ nav{
     background-size: 155px;
     background-repeat: no-repeat;
     background-position: right;
-    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
     color: white;
     z-index: 1000;
     position: fixed;
@@ -42,7 +52,27 @@ nav ul{
     border-radius: 20px;
 }
 
-#sobre-mi, #proyectos, #contacto, #referencias{
+.inicio_div.oscuro{
+    color: white;
+}
+
+.aboutme_div.oscuro{
+    background-color: #aeaeaec2;
+}
+
+.proyectos_div.oscuro{
+    background-color: #aeaeaec2;
+}
+
+.contacto_div.oscuro{
+    background-color: #aeaeaec2;
+}
+
+.referencias_div.oscuro{
+    background-color: #aeaeaec2;
+}
+
+.aboutme_div{
     width: 80%;
     margin: auto;
     margin-top: 30px;
@@ -52,9 +82,6 @@ nav ul{
     border-radius: 20px;
     padding: 30px;
     font-size: large;
-}
-
-.aboutme_div{
     color: rgb(7, 7, 6);
     text-align: left;
     font-style: italic;
@@ -65,6 +92,15 @@ nav ul{
 }
 
 .proyectos_div{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    background-color: #ffffffc2;
+    border: 5px solid #04ff00;
+    border-style: dotted;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: large;
     text-align: right;
     font-style: oblique;
     background-image: url('img/logo-piton.png');
@@ -73,7 +109,34 @@ nav ul{
     background-position: left 30%;
 }
 
+article{
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+}
+
+article.show{
+    max-height: 550px;
+    opacity: 1;
+}
+
+.mustras{
+    border-radius: 5px;
+    width: 360px;
+    box-shadow: 5px 0px 4px black;
+}
+
 .contacto_div{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    background-color: #ffffffc2;
+    border: 5px solid #04ff00;
+    border-style: dotted;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: large;
     text-align: left;
     font-style: oblique;
     background-image: url('img/carta.png');
@@ -108,6 +171,15 @@ th, td{
 }
 
 .referencias_div{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    background-color: #ffffffc2;
+    border: 5px solid #04ff00;
+    border-style: dotted;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: large;
     text-align: right;
     font-style: oblique;
     background-image: url('img/referencia.png');
@@ -118,11 +190,6 @@ th, td{
 
 li{
     color: aqua;
-}
-
-header{
-    color: rgb(230, 64, 64);
-    text-align: center;
 }
 
 .fotuki{
@@ -144,9 +211,18 @@ body{
     background-attachment: local;
 }
 
+body.oscuro{
+    background-image: url('img/jonathan.png');
+    background-color: #2e2e2e;
+}
+
 aside{
     margin-top: 20px;
     text-align: center;
+}
+
+aside.oscuro{
+    color: white;
 }
 
 footer{
@@ -154,12 +230,15 @@ footer{
     color: black;
 }
 
-#claro-btn, #oscuro-btn, #subir-btn{
+footer.oscuro{
+    color: white;
+}
+
+#tema-btn, #subir-btn{
     bottom: 30px;
     width: 55px;
     height: 55px;
     position: fixed;
-    cursor: pointer;
     background-size: 55px 55px;
     background-repeat: no-repeat;
     border-radius: 10px;
@@ -168,22 +247,43 @@ footer{
     box-shadow: 0px 6px 10px black;
 }
 
+button{
+    width: 110px;
+    height: 30px;
+    background-color: #cbebac;
+    border-radius: 5px;
+    box-shadow: 3px 3px 0px black;
+    cursor: pointer;
+}
+
+::placeholder, label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+
+input, textarea{
+    width: 200px;
+    height: 20px;
+    box-shadow: 3px 3px 0px black;
+}
+
 #subir-btn{
-    display: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
     right: 30px;
     background-image: url('img/mano.png');
 }
 
 #subir-btn.show{
+    opacity: 1;
+}
+
+.botonsito{
     display: block;
-}
-
-#claro-btn{
     left: 30px;
-    background-image: url('img/sol.jpg');
+    background-image: url('img/luna.jpg');
 }
 
-#oscuro-btn{
-    left: 110px;
-    background-image: url('img/luna.jpg');
+.botonsito.oscuro{
+    background-image: url('img/sol.jpg');
 }
